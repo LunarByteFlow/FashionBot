@@ -1,4 +1,6 @@
 import React from 'react'
+import LogoImage from '../../images/logo.jpg'
+
 
 export default function Footer() {
   return (
@@ -21,7 +23,7 @@ export default function Footer() {
               <div className="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 d-flex flex-column align-items-center justify-content-center mb-4">
                 <img
                   className="footer-logo mb-3 img-fluid rounded-circle"
-                  src="https://freedesignfile.com/upload/2021/08/Bakery-logo-vector.jpg"
+                  src={LogoImage}
                   alt=""
                 />
                 <div>

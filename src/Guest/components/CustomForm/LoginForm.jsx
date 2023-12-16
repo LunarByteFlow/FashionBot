@@ -5,6 +5,8 @@ import Cookies from 'js-cookie'
 import './loginui.scss'
 import LogoImage from '../../../images/logo.jpg'
 
+
+
 import {
   MDBBtn,
   MDBContainer,
@@ -13,12 +15,7 @@ import {
   MDBInput
 }
   from 'mdb-react-ui-kit';
-
   
-
-
-
-
 
 export default function LoginForm() {
 
@@ -34,19 +31,17 @@ export default function LoginForm() {
       Email: Email,
       Password: Password,
       ContactNo: ContactNo
-
     }
 
     // console.log(payload)
+   
 
     axios.post('http://localhost:1234/api/login', payload)
       .then((loginsuccess) => {
-
-        Cookies.set('token', loginsuccess.data.token)        //cookies main token ki value api se jo arahi wo set krdi
-
+        Cookies.set('token', loginsuccess.data.token )        //cookies main token ki value api se jo arahi wo set krdi
         dispatch({
           type: "LOGIN_USER",
-          token: loginsuccess.data.token   //dipqtch ki ha token ki value
+          token: loginsuccess.data.token  //dipqtch ki ha token ki value
         })
       })
       .catch((error) => { console.log(error.meesage) })

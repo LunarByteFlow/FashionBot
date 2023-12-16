@@ -5,6 +5,7 @@ import React, { useContext, useState } from 'react'
 import Boutique from './Boutique'
 import Guest from './Guest'
 import User from './User'
+import Admin from './Admin'
 import { logincontext } from './GlobalContext/context'
 
 
@@ -43,7 +44,7 @@ console.log(state)
 //ek function banaya ha currentuser k naam se yeh function takeRole waly function ko value bhaje raha yani jab yeh run hoga tab takeRole bhi run hoga
 //jo bhi role useState se de rahy wo pehly current user mai ja raha phir takeRoll main phir object Componentbyroll main and then wahan se a:b   b value aa rahi jo k koi capital letter se start hony wali filename ha an humny usko ek tarha se print krwana ha
 
-const CurrentUser = takeRole(state.token)
+const CurrentUser = takeRole(state.user.Role)
 
   return (
     <>

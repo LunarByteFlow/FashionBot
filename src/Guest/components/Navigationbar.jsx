@@ -18,16 +18,16 @@ function Navigationbar() {
     <Navbar expand="lg" className='navvbar' >
       <div className="container ">
         <Navbar.Brand href="#home" >
-          <div className="d-flex align-items-center" >
-            <img
-              alt=""
-              src={LogoImage}
-              width="40"
-              height="40"
-              className="d-inline-block align-top rounded-circle"
-            />{'  '}
-            FashionBot
-          </div>
+        <Link to="/" className="d-flex align-items-center nav-link" >
+                <img
+                  alt=""
+                  src={LogoImage}
+                  width="40"
+                  height="40"
+                  className="d-inline-block align-top rounded-circle"
+                />{'  '}
+                FashionBot
+              </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
