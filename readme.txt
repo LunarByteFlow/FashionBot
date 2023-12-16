@@ -11,9 +11,3 @@ import { Route,Routes, } from "react-router-dom";
     </Routes>
 
 
-ACCOUNTS:
-admin, boutique, guest, user
-
-COMMANDS I USED TO DOWNLOAD EXTRAS:
-npm install js-cookies
-npm add sass

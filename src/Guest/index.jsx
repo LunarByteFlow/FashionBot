@@ -1,18 +1,23 @@
 import React from 'react'
-import { Route,Routes, } from "react-router-dom";
-import Home from './pages/Home';
+import {Routes, Route, Navigate } from 'react-router-dom'
+import Home from './pages/Home'
+import LoginPage from './pages/LoginPage'
+import RegisterUser from './pages/RegisterUser'
+import Navigationbar from './components/Navigationbar'
 
 
-function index() {
-  return (
-   
-    <Routes>
-        <Route path="/" element={<Home />} />
-        {/* <Route path="/blog/*" element={<BlogApp />} /> */}
-        {/* <Route path="/users/*" element={<UserApp />} /> */}
-    </Routes>
-    
-  ) 
+export default function Guest() {
+  
+return (
+<>
+
+<Navigationbar/>
+<Routes>
+     <Route path="/" element={<Home />} />
+     <Route path="/login" element={<LoginPage />} />
+     <Route path="/register" element={<RegisterUser />} />
+     <Route path="*" element={<Navigate to="/" replace={true} />} />
+</Routes>
+</>
+  )
 }
-
-export default index

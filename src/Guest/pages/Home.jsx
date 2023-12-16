@@ -1,15 +1,19 @@
 import React from 'react'
+import RecentAd from '../components/RecentAd'
+import Boutique from '../components/Boutique'
+import Navcategory from '../components/Navcategory'
 
-
-//yahan hogi guest k home page ki coding
-function Home() {
+export default function Home() {
   return (
-    <div>Home for the guests</div>
+    <>
+{/* main image */}
+      {/* <div style={{width:'100%'}} className='backgroundcolor'>
+        <img src={img1} alt="" className='img-fluid' style={{width:'100%'}}/>
+      </div> */}
+      <Navcategory/>
+      <RecentAd />
+      <Boutique />
 
-    //sabse pehly lagega navbar
-
-
+    </>
   )
 }
-
-export default Home
