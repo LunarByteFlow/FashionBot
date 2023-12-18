@@ -51,7 +51,6 @@ export default function Navigationbar() {
               </Form>
               <Nav  className='d-flex align-items-center'>
                 <Link to="/" className='nav-link'>Post an Ad</Link>
-                <Link className='nav-link' to="/cart">Checkout</Link>
                             <CartOffCanvas/>
                             <Link className='nav-link' to="/"><button className='btn btn-outline-dark ' onClick={() => {
                                 dispatch({

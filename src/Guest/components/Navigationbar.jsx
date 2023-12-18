@@ -17,8 +17,8 @@ function Navigationbar() {
   return (
     <Navbar expand="lg" className='navvbar' >
       <div className="container ">
-        <Navbar.Brand href="#home" >
-        <Link to="/" className="d-flex align-items-center nav-link" >
+        <Link to="/" as={Navbar.Brand} className="d-flex align-items-center nav-link" >
+      
                 <img
                   alt=""
                   src={LogoImage}
@@ -27,8 +27,8 @@ function Navigationbar() {
                   className="d-inline-block align-top rounded-circle"
                 />{'  '}
                 FashionBot
+      
               </Link>
-        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Form className="d-flex ms-auto me-3">
@@ -41,7 +41,6 @@ function Navigationbar() {
             <Button variant="outline-success">Search</Button>
           </Form>
           <Nav >
-            <Link to="/" className='nav-link'>Be a Boutique</Link>
             <Link to="/login" className='nav-link'>Login</Link>
             <Link to="/register" className='nav-link'>Register</Link>
             <Link to="/" className='nav-link'>Post an Ad</Link>

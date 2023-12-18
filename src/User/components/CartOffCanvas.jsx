@@ -1,5 +1,6 @@
 import React from 'react'
 import {BsCart3} from 'react-icons/Bs'
+import { TiHeartOutline } from "react-icons/ti";
 import { useState, useContext } from 'react';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { CartContext } from '../context/context';   //likhna baki
@@ -17,7 +18,7 @@ export default function CartOffCanvas() {
   
   return (
     <>
-    <button className='btn position-relative mx-2' onClick={handleShow}><BsCart3/>
+    <button className='btn position-relative mx-2' onClick={handleShow}><TiHeartOutline/>
     <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{cart_state.cart.length}</span>
     </button>
 
@@ -25,8 +26,8 @@ export default function CartOffCanvas() {
     {/* offcanvas */}
     <Offcanvas show={show} onHide={handleClose} placement='end' name='end'>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>CART</Offcanvas.Title>
-          <button className='btn btn-outline-dark mx-3' onClick={()=>{cart_dispatch({type:'CLEAR_CART'})}}>CLEAR CART</button>
+          <Offcanvas.Title>Ads</Offcanvas.Title>
+          <button className='btn btn-outline-dark mx-3' onClick={()=>{cart_dispatch({type:'CLEAR_CART'})}}>CLEAR Ads</button>
         </Offcanvas.Header>
         <Offcanvas.Body>
           {

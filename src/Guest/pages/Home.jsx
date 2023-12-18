@@ -1,6 +1,5 @@
 import React from 'react'
 import RecentAd from '../components/RecentAd'
-import Boutique from '../components/Boutique'
 import Navcategory from '../components/Navcategory'
 import Footer from '../../User/components/Footer'
 
@@ -13,7 +12,6 @@ export default function Home() {
       </div> */}
       <Navcategory/>
       <RecentAd />
-      <Boutique />
       <Footer/>
 
     </>

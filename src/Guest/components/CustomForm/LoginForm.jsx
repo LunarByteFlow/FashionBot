@@ -4,6 +4,8 @@ import { logincontext } from './../../../GlobalContext/context'
 import Cookies from 'js-cookie'
 import './loginui.scss'
 import LogoImage from '../../../images/logo.jpg'
+import { jwtDecode } from "jwt-decode";
+
 
 
 
@@ -34,14 +36,13 @@ export default function LoginForm() {
     }
 
     // console.log(payload)
-   
 
     axios.post('http://localhost:1234/api/login', payload)
       .then((loginsuccess) => {
         Cookies.set('token', loginsuccess.data.token )        //cookies main token ki value api se jo arahi wo set krdi
         dispatch({
           type: "LOGIN_USER",
-          token: loginsuccess.data.token  //dipqtch ki ha token ki value
+          person: loginsuccess.data.token //dipqtch ki ha token ki value
         })
       })
       .catch((error) => { console.log(error.meesage) })

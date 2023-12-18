@@ -8,7 +8,7 @@ import Cookies from 'js-cookie'
 
 //yeh ek object ha.
 let data = {
-  token: Cookies.get('token') 
+  person: Cookies.get('token') || undefined
 };
  
 export default function LoginContextProvider({children}) {
@@ -16,8 +16,8 @@ export default function LoginContextProvider({children}) {
     const [state,dispatch]=useReducer(loginreducer, data)
 
     useEffect(() => {
-      Cookies.set('token', state.token)
-  }, [state.token])
+      Cookies.set('token', state.person)
+  }, [state.person])
 
 
 
